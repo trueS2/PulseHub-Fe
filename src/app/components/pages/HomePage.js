@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { useGithubUser } from '../hooks/useGithubUser';
-import UserProfile from '../components/UserProfile';
+import { useGithubUser } from '../../hooks/useGithubUser';
+import UserProfile from '../UserProfile';
 
 function HomePage() {
     const [username, setUsername] = useState('');
