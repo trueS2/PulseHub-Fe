@@ -1,6 +1,6 @@
 import React from 'react';
 import InputField from '../atoms/InputField';
-import Button from '../atoms/Button';
+import Button from '../atoms/SearchBtn';
 
 function SearchForm({ username, setUsername, onSearch }) {
     return (

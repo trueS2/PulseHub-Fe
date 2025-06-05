@@ -3,12 +3,13 @@
 button {
     background-color: #a8d5ba;
     border: none;
-    padding: 10px 20px;
     border-radius: 6px;
     color: white;
     font-weight: 600;
     font-size: 16px;
     cursor: pointer;
+    width: 80px;
+    height: 45px;
 }
 
 button:hover {
