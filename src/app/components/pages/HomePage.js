@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { useGithubUser } from '../../hooks/useGithubUser';
 import UserProfile from '../organisms/UserProfile';
 import SearchForm from '../molecules/SearchForm';
+import Header from '../organisms/Header';
+
 
 function HomePage() {
     const [username, setUsername] = useState('');
@@ -16,6 +18,7 @@ function HomePage() {
 
     return (
         <div>
+            <Header />
             <h1>GitHub 사용자 검색</h1>
 
             <SearchForm
