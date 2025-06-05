@@ -1,0 +1,17 @@
+/* src/styles/global.css */
+
+button {
+    background-color: #a8d5ba;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    width: 80px;
+    height: 45px;
+}
+
+button:hover {
+    background-color: #8cc69f;
+}

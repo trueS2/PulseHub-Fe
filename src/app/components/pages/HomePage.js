@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useGithubUser } from '../../hooks/useGithubUser';
 import UserProfile from '../organisms/UserProfile';
+import SearchForm from '../molecules/SearchForm';
 
 function HomePage() {
     const [username, setUsername] = useState('');
@@ -16,13 +17,12 @@ function HomePage() {
     return (
         <div>
             <h1>GitHub 사용자 검색</h1>
-            <input
-                type="text"
-                placeholder="GitHub 아이디 입력"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
+
+            <SearchForm
+                username={username}
+                setUsername={setUsername}
+                onSearch={handleSearch}
             />
-            <button onClick={handleSearch}>검색</button>
 
             {loading && <p>로딩 중...</p>}
             {error && <p>에러: {error.message}</p>}
