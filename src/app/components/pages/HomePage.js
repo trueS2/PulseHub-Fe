@@ -1,13 +1,14 @@
+// src/app/components/pages/HomePage.js
 import React, { useState } from 'react';
 import { useGithubUser } from '../../hooks/useGithubUser';
-import UserProfile from '../UserProfile';
+import UserProfile from '../organisms/UserProfile';
 
 function HomePage() {
     const [username, setUsername] = useState('');
     const { userData, loading, error, getUserData } = useGithubUser();
 
     const handleSearch = () => {
-        if (username.trim() !== '') {
+        if (username.trim()) {
             getUserData(username.trim());
         }
     };
