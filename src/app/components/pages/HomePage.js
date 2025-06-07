@@ -29,6 +29,7 @@ function HomePage() {
                 onSearch={handleSearch}
             />
 
+            <Heading level={2}>프로필</Heading>
             {loading && <p>로딩 중...</p>}
             {error && <p>에러: {error.message}</p>}
             {userData && <UserProfile user={userData} />}
