@@ -3,7 +3,7 @@ import React from 'react';
 import Avatar from '../atoms/Avatar';
 import Heading from '../atoms/Heading';
 import Text from '../atoms/Text';
-import FollowInfo from '../molecules/FollowInfo';
+import FollowInfo from '../atoms/FollowInfo';
 
 function UserProfile({ user }) {
     return (
