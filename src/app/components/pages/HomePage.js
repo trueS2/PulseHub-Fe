@@ -4,6 +4,8 @@ import { useGithubUser } from '../../hooks/useGithubUser';
 import UserProfile from '../organisms/UserProfile';
 import SearchForm from '../molecules/SearchForm';
 import Header from '../organisms/Header';
+import Heading from '../atoms/Heading';
+import Text from '../atoms/Text';
 
 
 function HomePage() {
@@ -19,7 +21,7 @@ function HomePage() {
     return (
         <div>
             <Header />
-            <h1>GitHub 사용자 검색</h1>
+            <Heading level={2}>GitHub 사용자 검색</Heading>
 
             <SearchForm
                 username={username}
@@ -27,6 +29,7 @@ function HomePage() {
                 onSearch={handleSearch}
             />
 
+            <Heading level={2}>프로필</Heading>
             {loading && <p>로딩 중...</p>}
             {error && <p>에러: {error.message}</p>}
             {userData && <UserProfile user={userData} />}

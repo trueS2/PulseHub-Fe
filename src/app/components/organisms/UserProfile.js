@@ -8,7 +8,7 @@ import FollowInfo from '../molecules/FollowInfo';
 function UserProfile({ user }) {
     return (
         <div>
-            <Heading>{user.login}</Heading>
+            <Heading level={3}>{user.login}</Heading>
             <Avatar src={user.avatar_url} alt={`${user.login}'s avatar`} />
             <Text>{user.bio}</Text>
             <FollowInfo followers={user.followers} following={user.following} />

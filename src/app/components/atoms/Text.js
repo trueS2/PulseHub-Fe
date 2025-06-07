@@ -1,8 +1,8 @@
-// src/app/components/atoms/Text.js
 import React from 'react';
+import styles from './Text.module.css';
 
 function Text({ children }) {
-    return <p>{children}</p>;
+    return <p className={styles.text}>{children}</p>;
 }
 
 export default Text;
