@@ -1,0 +1,30 @@
+.text {
+    color: #333;
+    line-height: 1.6;
+    margin: 0 0 12px 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.level1 {
+    font-size: 22px;
+}
+
+.level2 {
+    font-size: 18px;
+}
+
+.level3 {
+    font-size: 16px;
+}
+
+.level4 {
+    font-size: 14px;
+}
+
+.level5 {
+    font-size: 13px;
+}
+
+.level6 {
+    font-size: 12px;
+}
