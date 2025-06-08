@@ -1,0 +1,9 @@
+/* src/app/components/atoms/Avatar.module.css */
+.avatar {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    border: 3px solid rgba(140, 198, 159, 0.5);
+}
