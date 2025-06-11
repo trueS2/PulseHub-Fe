@@ -1,4 +1,4 @@
-// src/app/components/molecules/CommitChart.js
+// src/app/components/atoms/CommitChart.js
 import React from 'react';
 import {
     LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid,
