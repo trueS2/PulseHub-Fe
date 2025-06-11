@@ -1,3 +1,4 @@
+// src/app/components/pages/HomePage.js
 import React, { useState } from 'react';
 import { useGithubUser } from '../../hooks/useGithubUser';
 import UserProfile from '../organisms/UserProfile';
@@ -37,17 +38,18 @@ function HomePage() {
                 onSearch={handleSearch}
             />
 
-            <Heading level={2}>프로필</Heading>
             {loading && <p>로딩 중...</p>}
             {error && <p>에러: {error.message}</p>}
 
             {userData && (
                 <>
+                    <Heading level={2}>프로필</Heading>
+
                     <UserProfile user={userData} />
 
                     <div style={{ marginTop: '1rem' }}>
                         <label htmlFor="commitDays">
-                            <Heading level={2}>커밋 조회 기간</Heading>
+                            <Heading level={2}>커밋 조회</Heading>
                         </label>
 
                         <select
