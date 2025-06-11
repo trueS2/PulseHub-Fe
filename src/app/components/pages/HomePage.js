@@ -5,11 +5,11 @@ import UserProfile from '../organisms/UserProfile';
 import SearchForm from '../molecules/SearchForm';
 import Header from '../organisms/Header';
 import Heading from '../atoms/Heading';
-import Text from '../atoms/Text';
-
+import CommitSection from '../organisms/CommitSection';
 
 function HomePage() {
     const [username, setUsername] = useState('');
+    const days = 30;
     const { userData, loading, error, getUserData } = useGithubUser();
 
     const handleSearch = () => {
@@ -32,7 +32,13 @@ function HomePage() {
             <Heading level={2}>프로필</Heading>
             {loading && <p>로딩 중...</p>}
             {error && <p>에러: {error.message}</p>}
-            {userData && <UserProfile user={userData} />}
+
+            {userData && (
+                <>
+                    <UserProfile user={userData} />
+                    <CommitSection username={userData.login} days={days} />
+                </>
+            )}
         </div>
     );
 }
