@@ -15,7 +15,6 @@ function CommitSection({ username, days }) {
         setLoading(true);
         fetchCommitAnalysis(username, days)
             .then(data => {
-                console.log('API response:', data);
                 const commits = data.dailyCommitCounts || data.data || data;
 
                 const chartData = Object.entries(commits).map(([date, count]) => ({
@@ -23,7 +22,6 @@ function CommitSection({ username, days }) {
                     count,
                 }));
 
-                console.log('chartData:', chartData);
                 setCommitData(chartData);
                 setLoading(false);
             })
