@@ -46,7 +46,10 @@ function HomePage() {
                     <UserProfile user={userData} />
 
                     <div style={{ marginTop: '1rem' }}>
-                        <label htmlFor="commitDays">커밋 조회 기간: </label>
+                        <label htmlFor="commitDays">
+                            <Heading level={2}>커밋 조회 기간</Heading>
+                        </label>
+
                         <select
                             id="commitDays"
                             value={commitDays}
