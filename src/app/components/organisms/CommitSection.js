@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { fetchCommitAnalysis } from '../../api/commit';
 import CommitChart from '../atoms/CommitChart';
+import Text from '../atoms/Text';
+
 
 function CommitSection({ username, days }) {
     const [commitData, setCommitData] = useState([]);
@@ -38,7 +40,7 @@ function CommitSection({ username, days }) {
 
     return (
         <div>
-            <h2>커밋 분석 (최근 {days}일)</h2>
+            <Text>커밋 분석 (최근 {days}일)</Text>
             <CommitChart data={commitData} />
         </div>
     );

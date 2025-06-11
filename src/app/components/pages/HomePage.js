@@ -1,4 +1,3 @@
-// src/app/components/pages/HomePage.js
 import React, { useState } from 'react';
 import { useGithubUser } from '../../hooks/useGithubUser';
 import UserProfile from '../organisms/UserProfile';
@@ -9,12 +8,21 @@ import CommitSection from '../organisms/CommitSection';
 
 function HomePage() {
     const [username, setUsername] = useState('');
-    const days = 30;
+    const [commitDays, setCommitDays] = useState(30);
+    const [commitAnalyzeTrigger, setCommitAnalyzeTrigger] = useState(false);
+
     const { userData, loading, error, getUserData } = useGithubUser();
 
     const handleSearch = () => {
         if (username.trim()) {
             getUserData(username.trim());
+            setCommitAnalyzeTrigger(false);
+        }
+    };
+
+    const handleCommitAnalyze = () => {
+        if (userData) {
+            setCommitAnalyzeTrigger(true);
         }
     };
 
@@ -36,7 +44,27 @@ function HomePage() {
             {userData && (
                 <>
                     <UserProfile user={userData} />
-                    <CommitSection username={userData.login} days={days} />
+
+                    <div style={{ marginTop: '1rem' }}>
+                        <label htmlFor="commitDays">커밋 조회 기간: </label>
+                        <select
+                            id="commitDays"
+                            value={commitDays}
+                            onChange={(e) => setCommitDays(Number(e.target.value))}
+                        >
+                            <option value={15}>15일</option>
+                            <option value={30}>1개월</option>
+                            <option value={60}>2개월</option>
+                            <option value={90}>3개월</option>
+                        </select>
+                        <button onClick={handleCommitAnalyze} style={{ marginLeft: '0.5rem' }}>
+                            커밋 분석
+                        </button>
+                    </div>
+
+                    {commitAnalyzeTrigger && (
+                        <CommitSection username={userData.login} days={commitDays} />
+                    )}
                 </>
             )}
         </div>
