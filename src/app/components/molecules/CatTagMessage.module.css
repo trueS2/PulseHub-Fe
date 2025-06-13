@@ -3,33 +3,44 @@
     align-items: flex-end;
     gap: 12px;
     margin-top: 24px;
-    position: relative;
 }
 
 .catImage {
     width: 80px;
     height: auto;
+    animation: bounce 1.5s ease-in-out infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
 }
 
 .speechBubble {
     position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.chatboxImage {
-    width: 200px;
-    height: auto;
-}
-
-.chatText {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    text-align: center;
-    width: 140px;
+    color: #333;
+    border: 2px solid #8cc69f;
+    border-radius: 12px;
+    padding: 12px 16px;
+    max-width: 240px;
     font-size: 14px;
     line-height: 1.4;
+}
+
+.speechBubble::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #8cc69f transparent transparent;
 }
