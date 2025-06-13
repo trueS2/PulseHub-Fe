@@ -8,11 +8,8 @@ function CatTagMessage({ tag }) {
         <div className={styles.catTagMessage}>
             <img src="/pulsehub-cat.png" alt="GitHub Cat" className={styles.catImage} />
             <div className={styles.speechBubble}>
-                <img src="/pulsehub-chatbox.png" alt="말풍선" className={styles.chatboxImage} />
-                <span className={styles.chatText}>
-                    당신은 <strong>{tag.label}</strong>!<br />
-                    {tag.description}
-                </span>
+                당신은 <strong>{tag.label}</strong>!<br />
+                {tag.description}
             </div>
         </div>
     );
