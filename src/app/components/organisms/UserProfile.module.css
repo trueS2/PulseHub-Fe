@@ -1,0 +1,15 @@
+/* src/app/components/organisms/UserProfile.module.css */
+
+.profileRow {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    margin-top: 12px;
+}
+
+.profileInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+}
