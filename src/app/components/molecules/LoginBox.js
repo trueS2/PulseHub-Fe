@@ -4,7 +4,7 @@ import Button from '../atoms/LoginBtn';
 
 function LoginBox() {
     const handleLogin = () => {
-        window.location.href = 'http://localhost:8080/oauth2/authorization/github'; // 백엔드 OAuth2 로그인 주소
+        window.location.href = 'http://localhost:8080/oauth2/authorization/github';
     };
 
     return (
