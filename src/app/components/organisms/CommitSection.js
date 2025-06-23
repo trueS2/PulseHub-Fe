@@ -43,7 +43,7 @@ function CommitSection({ username, days }) {
 
     return (
         <div>
-            <Text>커밋 분석 (최근 {days}일)</Text>
+            <Text>👉 최근 {days}일 분석</Text>
 
             {topTag && (
                 <div style={{ marginBottom: '1.5rem' }}>

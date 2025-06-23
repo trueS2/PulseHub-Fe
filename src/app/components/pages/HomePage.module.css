@@ -1,0 +1,17 @@
+/* src/app/components/pages/HomePage.module.css */
+.content {
+    padding: 1.5rem 1rem;
+    padding-left: 2rem;
+}
+
+
+.commitControls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.commitControls select {
+    padding: 0.25rem 0.5rem;
+}
