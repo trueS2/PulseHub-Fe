@@ -1,19 +1,24 @@
+/* src/app/components/organisms/Header.module.css */
 .header {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     width: 100%;
     height: 70px;
-    background-color: #8cc69f;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 0 20px;
     box-sizing: border-box;
+    background-color: #8cc69f;
     color: white;
     font-weight: 700;
 }
 
-.logo {
-    font-size: 30px;
-    height: auto;
+.logoContainer {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
 }
 
 .logoImage {
@@ -21,4 +26,25 @@
     height: 50px;
     margin-right: 10px;
     border-radius: 100px;
+}
+
+.logo {
+    font-size: 30px;
+    margin: 0;
+    line-height: 1;
+}
+
+.logoutButton {
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: white;
+    margin-left: auto;
+}
+
+.logoutButton:hover {
+    background: rgba(255, 255, 255, 0.2);
 }
