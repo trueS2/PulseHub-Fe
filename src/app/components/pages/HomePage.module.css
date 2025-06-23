@@ -4,9 +4,6 @@
     padding-left: 2rem;
 }
 
-.content>*+* {
-    margin-top: 1.5rem;
-}
 
 .commitControls {
     display: flex;
@@ -17,17 +14,4 @@
 
 .commitControls select {
     padding: 0.25rem 0.5rem;
-}
-
-.commitControls button {
-    padding: 0.25rem 0.75rem;
-    background-color: #8cc69f;
-    border: none;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.commitControls button:hover {
-    opacity: 0.9;
 }
