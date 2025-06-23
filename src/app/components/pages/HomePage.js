@@ -6,6 +6,7 @@ import Heading from '../atoms/Heading';
 import SearchForm from '../molecules/SearchForm';
 import UserProfile from '../organisms/UserProfile';
 import CommitSection from '../organisms/CommitSection';
+import Text from '../atoms/Text';
 import styles from './HomePage.module.css';
 
 function HomePage() {
@@ -42,6 +43,7 @@ function HomePage() {
                     setUsername={setUsername}
                     onSearch={handleSearch}
                 />
+                <Text>🔒 다른 계정 조회 시 공개 저장소만 분석됩니다.</Text>
 
                 {loading && <p>로딩 중...</p>}
                 {error && <p>에러: {error.message}</p>}
