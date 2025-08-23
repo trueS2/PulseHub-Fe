@@ -6,8 +6,12 @@ import CatTagMessage from '../molecules/CatTagMessage';
 
 function CommitSection({ username, days }) {
     const [commitData, setCommitData] = useState([]);
+
+    // eslint-disable-next-line no-unused-vars
     const [peakHour, setPeakHour] = useState(null);
+    // eslint-disable-next-line no-unused-vars
     const [peakHourCommitCount, setPeakHourCommitCount] = useState(null);
+
     const [topTag, setTopTag] = useState(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
