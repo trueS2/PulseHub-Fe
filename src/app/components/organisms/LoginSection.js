@@ -4,7 +4,8 @@ import Button from '../atoms/LoginBtn'
 
 function LoginSection() {
     const handleLogin = () => {
-        window.location.href = 'http://localhost:8080/oauth2/authorization/github'
+        const backendUrl = window.location.origin;
+        window.location.href = `${backendUrl}/oauth2/authorization/github`;
     }
 
     return (
